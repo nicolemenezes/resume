@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Nicole Menezes</title>
+    <link rel="stylesheet" href="resume.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+        .resume-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #download-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #download-btn:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-wrapper">
+        <div class="resume-container">
+            <div class="header">
+                <h1>NICOLE MENEZES</h1>
+                <h2>STUDENT</h2>
+                <p>I'm Nicole Menezes, enthusiastic and detail-oriented undergraduate student pursuing Bachelor's degree in electronics and computer science. I am passionate about exploring opportunities and contributing to various projects and events.</p>
+            </div>
+            <div class="contact-skills">
+                <div class="contact-section">
+                    <h3>CONTACT</h3>
+                    <p>9137919375</p>
+                    <br>
+                    <h3>EMAIL</h3>
+                    <p><a href="mailto:nicmenezes35@gmail.com">nicmenezes35@gmail.com</a></p>
+                    <br>
+                    <h3>LINKEDLN</h3>
+                    <p><a href="linkedln profile">Nicole Menezes</a></p>
+                    <br>
+                    <h3>GITHUB</h3>
+                    <p>nicolemenezes</p>
+                </div>
+                <div class="skills-section">
+                    <h3>SKILL</h3>
+                    <ul>
+                        <li>Canva, Adobe Photoshop</li>
+                        <li>Leadership</li>
+                        <li>Communication</li>
+                        <li>Basics of Web Development</li>
+                        <li>Decision Making</li>
+                        <li>Teamwork</li>
+                        <li>Social Media Management</li>
+                        <li>Strategic Thinking</li>
+                        <li>Analytical skills</li>
+                        <li>UI/UX designing</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education-experience">
+                <div class="education-section">
+                    <h3>EDUCATION</h3>
+                    <ul>
+                        <li><strong>SECONDARY EDUCATION:</strong> Mary Immaculate Girls' High School</li>
+                        <li><strong>JUNIOR COLLEGE:</strong> Prakash College of Commerce and Science</li>
+                        <li><strong>DEGREE COLLEGE:</strong> Fr. Conceicao Rodrigues College of Engineering</li>
+                    </ul>
+                </div>
+                <div class="experience-section">
+                    <h3>EXPERIENCE</h3>
+                    <ul>
+                        <li>Contributed in organizing various outreach programs</li>
+                        <li>Volunteered for CRMD 2023 and CRMD 2024</li>
+                        <li>GDSC workforce 23-24(organising committee of BitnBuild around the world 2.0)</li>
+                        <li>PR Manager of TEDxCRCE</li>
+                        <li>Organising committee of INTERNSHIP EXPO 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button id="download-btn">Download PDF</button>
+    </div>
+    
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function () {
+            const element = document.querySelector('.resume-container');
+            html2pdf().from(element).set({
+                margin: 1,
+                filename: 'Nicole_Menezes_Resume.pdf',
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            }).save();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Resume Container */
+.resume-container {
+    width: 850px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #e8c7b7; /*  blue */
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.header p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Contact and Skills Section */
+.contact-skills {
+    background-color:white ; /*c2 */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section, .skills-section {
+    width: 45%;
+}
+
+.contact-section h3, .skills-section h3 {
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid #a0a4a8;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-section p, .skills-section ul {
+    font-size: 0.95em;
+    color: #444;
+}
+
+.contact-section a {
+    color: #444;
+    text-decoration: none;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.skills-section li {
+    margin-bottom: 8px;
+}
+
+/* Education and Experience */
+.education-experience {
+    padding: 30px;
+}
+
+.education-section, .experience-section {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.education-section h3, .experience-section h3 {
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid #a0a4a8;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.education-section ul, .experience-section ul {
+    list-style-type: none;
+}
+
+.education-section li, .experience-section li {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.education-section strong, .experience-section strong {
+    display: block;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-skills {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-section, .skills-section {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .education-experience {
+        flex-direction: column;
+    }
+
+    .education-section, .experience-section {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .header {
+        padding: 20px 10px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1.3em;
+    }
+
+    .header p {
+        font-size: 0.9em;
+    }
+}
